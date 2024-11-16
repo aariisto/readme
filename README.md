@@ -1,5 +1,28 @@
 # Projet : Application Web de Service Vélib'
 
+## Sommaire
+
+1. [Description du Projet](#description)
+   - [Fonctionnalités principales](#fonctionnalités-principales-de-notre-application)
+   - [Défis rencontrés lors de la réalisation](#défis-rencontrés-lors-de-la-réalisation)
+2. [Rôle du Script Python](#rôle-du-script-python)
+3. [Prérequis](#prérequis)
+4. [Installation](#installation)
+5. [Explication du Fonctionnement du Script Python](#explication-du-fonctionnement-du-script-python)
+   - [Étape 1 : Récupération des données et traitement](#1-récupération-des-données-et-traitement)
+     - [Envoi de la requête à l'API](#11-envoi-de-la-requête-à-lapi)
+     - [Vérification de la validité de la réponse](#12-vérification-de-la-validité-de-la-réponse)
+     - [Extraction des données JSON](#13-extraction-des-données-json)
+     - [Filtrage et validation des données](#14-filtrage-et-validation-des-données)
+   - [Étape 2 : Retourner les données traitées pour utilisation dans l'application](#2-retourner-les-données-traitées-pour-utilisation-dans-lapplication)
+     - [Renvoyer les données formatées](#21-renvoyer-les-données-formatées)
+     - [Exposer les données via une API avec Flask](#22-exposer-les-données-via-une-api-avec-flask)
+     - [Comment accéder à l'API exposée avec Flask](#23-comment-accéder-à-lapi-exposée-avec-flask)
+6. [Usage](#usage)
+7. [Informations Importantes à Savoir](#informations-importantes-à-savoir)
+   - [Explication de CORS(app)](#explication-de-corsapp)
+8. [Conclusion](#conclusion)
+
 ## Description
 
 Ce projet consiste en une application web développée pour faciliter l'accès et l'utilisation du service de vélos en libre-service Vélib'. Vélib' est un réseau de stations de vélos électriques et mécaniques, disponible dans la ville de Paris et ses environs.
@@ -55,7 +78,7 @@ Le script Python joue un rôle central dans le projet en effectuant les étapes 
 
 Dans cette section, nous allons vous expliquer en détail le fonctionnement du script ligne par ligne ,nous diviserons l'explication en deux étapes clés pour que vous puissiez comprendre facilement comment le code fonctionne.
 
-## Étape 1 : **Récupération des données et traitement**
+## 1-Récupération des données et traitement
 
 Pour La première étape il faut se concetrer sur la fonction `get_stations()` qui consiste à récupérer les données des stations Vélib' via une requête API, puis à traiter ces données pour les rendre exploitables dans notre application. Voici les différentes étapes du code :
 
@@ -122,7 +145,7 @@ formatted_data = []
 - **Vérifications de type** : Nous nous assurons que chaque donnée (comme l'ID de station, le nom, la latitude, etc.) est du type attendu en utilisant `isinstance()`.
 - **Filtrage**: Si une station est valide, nous extrayons ses informations et les ajoutons à la liste `formatted_data`.
 
-## Étape 2 : **Retourner les données traitées pour utilisation dans l'application**
+## 2-Retourner les données traitées pour utilisation dans l'application
 
 Jusqu'à présent, nous avons compris comment la fonction `get_stations()` récupère et filtre les données. La question qui se pose maintenant est : comment pouvons-nous récupérer ces données dans notre application web ?
 
