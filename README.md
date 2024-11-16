@@ -1,9 +1,9 @@
 # Projet : Application Web de Service Vélib'
 
-## Sommaire
+### Sommaire
 
 1. [Description du Projet](#description)
-   - [Fonctionnalités principales](#fonctionnalités-principales-de-notre-application)
+   - [Fonctionnalités principales](#fonctionnalites-principales-de-notre-application)
    - [Défis rencontrés lors de la réalisation](#défis-rencontrés-lors-de-la-réalisation)
 2. [Rôle du Script Python](#rôle-du-script-python)
 3. [Prérequis](#prérequis)
@@ -20,7 +20,7 @@
      - [Comment accéder à l'API exposée avec Flask](#23-comment-accéder-à-lapi-exposée-avec-flask)
 6. [Usage](#usage)
 7. [Informations Importantes à Savoir](#informations-importantes-à-savoir)
-   - [Explication de CORS(app)](#explication-de-corsapp)
+   - [Explication de CORS(app)](#explication-de-corsapp-)
 8. [Conclusion](#conclusion)
 
 ## Description
