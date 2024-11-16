@@ -3,8 +3,8 @@
 ### Sommaire
 
 1. [Description du Projet](#description)
-   - [Fonctionnalités principales](#fonctionnalites-principales-de-notre-application)
-   - [Défis rencontrés lors de la réalisation](#défis-rencontrés-lors-de-la-réalisation)
+   - [Fonctionnalités principales](#fonctionnalités-principales-de-notre-application-)
+   - [Défis rencontrés lors de la réalisation](#défis-rencontrés-lors-de-la-réalisation-)
 2. [Rôle du Script Python](#rôle-du-script-python)
 3. [Prérequis](#prérequis)
 4. [Installation](#installation)
@@ -17,7 +17,7 @@
    - [Étape 2 : Retourner les données traitées pour utilisation dans l'application](#2-retourner-les-données-traitées-pour-utilisation-dans-lapplication)
      - [Renvoyer les données formatées](#21-renvoyer-les-données-formatées)
      - [Exposer les données via une API avec Flask](#22-exposer-les-données-via-une-api-avec-flask)
-     - [Comment accéder à l'API exposée avec Flask](#23-comment-accéder-à-lapi-exposée-avec-flask)
+     - [Comment accéder à l'API exposée avec Flask](#23-comment-accéder-à-lapi-exposée-avec-flask-)
 6. [Usage](#usage)
 7. [Informations Importantes à Savoir](#informations-importantes-à-savoir)
    - [Explication de CORS(app)](#explication-de-corsapp-)
