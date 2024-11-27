@@ -1,5 +1,27 @@
 # Projet : Application Web de Service Vélib'
 
+## Compétences de la SAE en BUT 2
+
+1. **Réaliser un développement d'application** _(réaliser)_  
+   Capacité à concevoir et développer des applications adaptées aux besoins spécifiques.
+
+2. **Optimiser des applications** _(optimiser)_  
+   Savoir améliorer les performances et l'efficacité des applications existantes.
+
+3. **Administrer des systèmes informatiques communicants complexes** _(administrer)_  
+   Maîtrise de l'administration des systèmes et réseaux avancés.
+
+4. **Gérer des données de l'information** _(gérer)_  
+   Compétence dans la manipulation, l'organisation et la sécurité des données.
+
+5. **Conduire un projet** _(conduire)_  
+   Gestion des différentes étapes d'un projet informatique, de la conception à la livraison.
+
+6. **Collaborer au sein d'une équipe informatique** _(collaborer)_  
+   Aptitude à travailler en collaboration dans un environnement de développement.
+
+# Livrable 1 : Scripts d'administration
+
 ### Sommaire
 
 1. [Description du Projet](#description)
@@ -25,31 +47,32 @@
 
 ## Description
 
-Ce projet consiste en une application web développée pour faciliter l'accès et l'utilisation du service de vélos en libre-service Vélib'. Vélib' est un réseau de stations de vélos électriques et mécaniques, disponible dans la ville de Paris et ses environs.
+Ce projet porte sur la mise au point d’une application Web pour l’accès et l’utilisation du service de vélos en libre-service Vélib’ à savoir un réseau de stations de vélos mécaniques et électriques sur le territoire de la ville de Paris et à son agglomération.
 
-L'application permet aux utilisateurs de visualiser sur une carte interactive toutes les stations de vélos Vélib', avec des informations détaillées telles que le nom de la station, sa localisation, et sa capacité (nombre de vélos disponibles). L'utilisateur peut interagir avec la carte, consulter les informations spécifiques d'une station, réserver un vélo ou planifier un itinéraire vers une station.
-
-Les données des stations Vélib' sont récupérées en temps réel à partir de l'API publique de Vélib'. Cette API fournit des informations détaillées pour chaque station, telles que l'ID, le nom, la géolocalisation (latitude et longitude) et la capacité. Ces données sont ensuite traitées et formatées pour être affichées dans l'application.
+L’application permet aux utilisateurs de visualiser sur une carte interactive l’ensemble des stations de vélos Vélib’ avec des informations afférentes (nom de la station, géolocalisation, capacité (nombre de vélos disponibles)).
+L’utilisateur peut interagir avec la carte, consulter les informations accordées à l’une des stations, réserver un vélo ou bien encore planifier son itinéraire vers une station.
+Les informations sur les stations de vélos sont collectées en temps réel à partir des API ouvertes de Vélib’. Ces API fournit plusieure donnees comme des informations sur chacune des stations : ID de la station, nom de la station, géolocalisation (latitude et longitude) et capacité de la station.
+Ces élément sont par la suite traitées et formatées pour être affichées sur l’application.
 
 ### Fonctionnalités principales de notre application :
 
-- **Visualisation des stations Vélib'** : Une carte interactive affiche toutes les stations de vélos disponibles, avec des informations mises à jour en temps réel provenant de l'API publique de Vélib'.
-- **Détails des stations** : En cliquant sur une station, l'utilisateur peut voir des informations comme le nom, la localisation (latitude et longitude), et la capacité de la station.
-- **Réservation de vélos** : Les utilisateurs peuvent réserver un vélo à une station donnée.
-- **Planification d'itinéraires** : L'utilisateur peut planifier un itinéraire vers une station.
-- **Historique des réservations et recherches** : L'application permet aux utilisateurs de créer un compte et consulter leur historique de recherches et réservations.
+- **Visualisation des stations Vélib'** : Carte interactive affichant la totalité des stations de vélos mises à jour en temps-réel via l’API publique de Vélib’.
+- **Détails des stations** : En cliquant sur une station, l’utilisateur peut avoir accès à des informations sur elle (nom, géolocalisation, capacité).
+- **Réservation de vélos** : L’utilisateur peut réserver à une station un vélo disponible.
+- **Planification d'itinéraires** : L’utilisateur peut planifier son itinéraire vers une station.
+- **Historique des réservations et recherches** : L’utilisateur peut se connecter à son compte pour consulter l’historique de ses recherches et réservations.
 
 ### Défis rencontrés lors de la réalisation :
 
-L'un des principaux défis lors de la création de cette application a été de récupérer et de traiter les données provenant de l'API Vélib'. En effet, l'API fournit une grande quantité de données pour chaque station, mais celles-ci sont parfois incomplètes ou mal structurées. Le défi consistait donc à comprendre comment extraire et valider les informations pertinentes de manière fiable.<br><br>
-Après des recherches approfondies, nous avons opté pour Python comme langage de script pour résoudre ce problème.
+Parmi les difficultés majeures qui ont été rencontrées lors de l’élaboration de cette application: l’indexation et le traitement des données fournies par l’API Vélib’. Car l’API donne l'accessibilité à une grande quantité de données qui parfois, apparaissent incomplètes voire mal formées ; le point problématique a donc consisté à s’assurer de la capacité à faire une extraction correcte et une valorisation adéquate des données utiles.
+Finalement, après de longues recherches, la solution retenue a été de se pencher sur l’usage de Python comme langage de script.
 
 ## Rôle du script Python
 
 Le script Python joue un rôle central dans le projet en effectuant les étapes suivantes :
 
 1. **Envoi de la requête à l'API** pour récupérer les données des stations Vélib'.
-2. **Traitement et validation des données** : Les informations récupérées sont filtrées et structurées selon les besoins de l'application (nom de la station, géolocalisation, capacité).
+2. **Traitement et validation des données** : Les informations récupérées sont filtrées et structurées selon les besoins de l'application (nom de la station, géolocalisation, capacité ect).
 3. **Renvoi des données formatées** sous forme de JSON vers le frontend, permettant à l'application de les afficher sur la carte interactive.
 
 ## Prérequis
@@ -63,12 +86,12 @@ Le script Python joue un rôle central dans le projet en effectuant les étapes 
 ## Installation
 
 1. **Télécharge le fichier ZIP** contenant le projet.
-2. **Décompresse le fichier ZIP** dans un dossier de ton choix.
-3. **Accéder au dossier du projet** dans ton terminal :
+2. **Décompresse le fichier ZIP** dans un dossier spécifique.
+3. **Accéder au dossier du projet** avec le terminal :
    ```bash
-   cd chemin/vers/le/dossier/du/projet
+   cd chemin_vers_le_dossier_du_projet
    ```
-4. **Installation des bibliothèques Python** dans ton terminal:
+4. **Installation des bibliothèques Python** la commande:
    ```bash
    pip install Flask Flask-CORS requests
    ```
@@ -76,7 +99,7 @@ Le script Python joue un rôle central dans le projet en effectuant les étapes 
 
 # Explication du Fonctionnement du Script Python
 
-Dans cette section, nous allons vous expliquer en détail le fonctionnement du script ligne par ligne ,nous diviserons l'explication en deux étapes clés pour que vous puissiez comprendre facilement comment le code fonctionne.
+Dans cette section, nous allons expliquer en détail le fonctionnement du script `script.py` ligne par ligne ,nous diviserons l'explication en deux étapes clés pour que vous puissiez comprendre facilement comment le code fonctionne.
 
 ## 1-Récupération des données et traitement
 
@@ -147,15 +170,15 @@ formatted_data = []
 
 ## 2-Retourner les données traitées pour utilisation dans l'application
 
-Jusqu'à présent, nous avons compris comment la fonction `get_stations()` récupère et filtre les données. La question qui se pose maintenant est : comment pouvons-nous récupérer ces données dans notre application web ?
+Jusqu'à présent, nous avons vu comment la fonction `get_stations()` récupère et filtre les données. La question qui se pose maintenant est : comment pouvons-nous récupérer ces données dans notre application web ?
 
-C'est ici que la bibliothèque `Flask` entre en jeu. Flask est un micro-framework pour Python qui permet de créer des API REST.
+La réponse est: l'utilisation de la bibliothèque `Flask`. Flask est un micro-framework pour Python qui permet de créer des API REST.
 
-Une API REST (Representational State Transfer) est un type d'interface qui permet à une application web d'interagir avec un serveur via des requêtes HTTP (GET, POST, PUT, DELETE).
+Une API REST (Representational State Transfer) est un type d'interface qui permet à une application web d'interagir avec un serveur via des requêtes HTTP (GET, POST...).
 
 Flask facilite la création de ces API en définissant des "routes" qui répondent à des requêtes spécifiques.
 
-Dans notre cas, `Flask` permet de créer une API qui renvoie les données des stations Vélib' sous forme de JSON. Cela permet à notre application web de récupérer facilement ces données pour les afficher sur la carte interactive. Voici les différentes étapes du code :
+Dans notre projet, `Flask` permet de créer une API qui renvoie les données des stations Vélib' sous forme de JSON. Cela permet à notre application web de récupérer facilement ces données pour les afficher sur la carte. Voici les différentes étapes du code :
 
 ### 2.1. Renvoyer les données formatées:
 
@@ -181,8 +204,8 @@ def get_stations():
 
 ```
 
-- `@app.route('/stations', methods=['GET'])` : Cette ligne définit une route dans Flask. Elle indique que chaque fois qu'une requête GET est envoyée à l'URL /stations, la fonction get_stations() sera appelée.
-- `def get_stations()` : C'est la fonction qui sera exécutée lorsque la route /stations sera demandée. Elle récupère les données, les filtre et les formate avant de les renvoyer.
+- `@app.route('/stations', methods=['GET'])` : Cette ligne définit une route dans Flask. Elle indique que chaque fois qu'une requête GET est envoyée à l'URL `/stations`, la fonction `get_stations()` sera appelée.
+- `def get_stations()` : C'est la fonction qui sera exécutée lorsque la route `/stations` sera demandée. Elle récupère les données, les filtre et les formate avant de les renvoyer.
 
 ### 2.3. Comment accéder à l'API exposée avec Flask :
 
@@ -190,7 +213,7 @@ Une fois l'API exposée avec Flask, elle devient accessible sur le serveur local
 
 - `:5000` est le port par défaut que Flask utilise pour servir l'API.\*
 
-Pour récupérer les données exposées par l'API, le frontend utilise une requête HTTP GET.Dans un fichier JavaScript, on peut utiliser la fonction fetch() pour envoyer cette requête à l'URL définie par Flask (ici, /stations).
+Pour récupérer les données exposées par l'API, le frontend utilise une requête HTTP GET.Dans un fichier JavaScript, on peut utiliser la fonction `fetch()` pour envoyer cette requête à l'URL définie par Flask (ici, /stations).
 
 Voici un exemple de code JavaScript pour récupérer les données de l'API :
 
@@ -215,16 +238,18 @@ fetch("http://localhost:5000/stations")
 Après avoir téléchargé et extrait le fichier ZIP, vous aurez un dossier structuré de la manière suivante :
 
 ```
-projetSAE/
+Scripte_Livrable1/
 ├── README.md
+├── images
+│   └──*.png
 ├── UsageTest
 │   └── testScript.html
 └── script.py
 ```
 
-Pour comprendre comment utiliser le script Python, il vous suffit de vous rendre dans le dossier `UsageTest`, où vous trouverez un fichier `testScript.html`. Ce fichier récupère les données de l'API Flask et les affiche en frontend sous forme de tableau.
+Pour comprendre comment utiliser le script Python, il vous suffit de vous rendre dans le dossier `UsageTest`, où vous trouverez un fichier `testScript.html`. Ce fichier récupère les données de l'API Flask avec `fetch` [comme expliqué précédemment](#23-comment-accéder-à-lapi-exposée-avec-flask-) et les affiche en frontend sous forme de tableau.
 
-Ce test est conçu uniquement pour illustrer comment exécuter le fichier `script.py`.
+Ce test est conçu uniquement pour illustrer comment exécuter le fichier `script.py` et de voir s'il est prêt à être intégré dans notre application web.
 
 L'utilisation est simple : il vous suffit d'exécuter la commande suivante dans votre terminal :
 
@@ -234,7 +259,7 @@ python script.py
 
 - `python script.py`: Cette commande va exécuter le script Python et démarrer automatiquement Flask, qui exposera l'API pour que vous puissiez y accéder depuis le frontend.
 
-Si tout fonctionne correctement, vous devriez voir le message suivant dans votre terminal :
+Si tout fonctionne correctement, l'affichage sera :
 
 ![Capture d'écran du terminal](images/flask_python.png)
 
@@ -242,24 +267,24 @@ _Cela signifie que l'API est en cours d'exécution et prête à être utilisée.
 
 - ### Ensuite, pour vérifier si une application web peut réellement accéder à cette API, il suffit de cliquer sur le fichier `testScript.html`. Cela ouvrira une page web qui affichera un tableau contenant les informations récupérées depuis l'API Flask.
 
-- ### Alternativement, vous pouvez également accéder directement à l'API via un navigateur web en vous rendant à l'adresse : `http://localhost:5000/stations`, où vous verrez un fichier JSON affichant toutes les informations des stations.
+- ### Alternativement, vous pouvez également accéder directement à l'API via un navigateur web : `http://localhost:5000/stations`, où vous verrez un fichier JSON affichant toutes les informations des stations.
 <br>
 
 # Informations Importantes à Savoir
 
 ### Explication de CORS(app) :
 
-- CORS (Cross-Origin Resource Sharing) : Cette ligne est essentielle pour permettre à notre application Flask d'accepter des requêtes provenant de sources différentes (d'un autre domaine).CORS est une politique de sécurité qui, par défaut, empêche le partage de ressources entre différentes origines pour des raisons de sécurité. En activant CORS dans notre application, tu autorises ton API Flask à répondre à des requêtes provenant de différents domaines, comme un front-end hébergé sur un serveur différent de celui de l'API.
+- CORS (Cross-Origin Resource Sharing) : Cette ligne est requise afin d’autoriser l’application Flask à accepter l’input de sources externes.CORS est une politique de sécurité intégrée dans la plupart des navigateurs modernes pour des raisons de sécurité. En train de l’activé, vous autorisez votre API Flask à mener une conversation entre deux domaines différents.
 
 Sans CORS, une application front-end exécutée sur un autre domaine serait bloquée lorsqu'elle tente d'effectuer une requête vers ton API Flask.
 
 # Conclusion
 
-La clé de ce script réside dans l'utilisation de Flask, qui nous permet de créer une API flexible capable d'exécuter n'importe quel script Python que nous écrivons. De plus, avec Python, nous disposons de nombreuses fonctionnalités de filtrage et de traitement des données, ce qui facilite grandement le déroulement de notre projet d'application web.
+La clé de ce script est, bien entendu, l’utilisation de Flask, qui peut créer une API flexible capable d’exécuter n’importe quel script Python que nous écrivons.
 
-Cette bibliothèque est extrêmement utile pour créer des API qui retournent des données extraites d'autres API publiques. Par exemple, si une API publique renvoie 10 données, mais que nous n'avons besoin que de 5, Flask nous permet de retourner uniquement ces 5 données spécifiques.
+Cette bibliothèque est très utile pour créer des API qui retournent des données extraites d’autres API publiques. Par exemple, si une API publique renvoie 10 données, mais que nous n'avons besoin que de 5, Flask nous permet de retourner uniquement ces 5 données spécifiques.
 
-En outre, Flask nous permet d'ajouter facilement des entrées dans le frontend et de les intégrer dans le routeur de Flask. Voici un exemple :
+En outre, Flask nous permet d'ajouter facilement des entrées depuis notre application web et de les intégrer dans le routeur de Flask. Voici un exemple :
 
 ```python
 @app.route('/station/<int:station_id>', methods=['GET'])
